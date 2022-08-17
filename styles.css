@@ -1,0 +1,148 @@
+@import url("https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;500;700&display=swap");
+
+:root {
+    --color-primary: #293462;
+    /* Este zindex es el maximo */
+    --zindex-navbar: 5000;
+    font-size: 16px;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+ul {
+    list-style: none;
+}
+
+a {
+    text-decoration: none;
+    color: var(--color-primary);
+    font-weight: 700;
+}
+
+.container_principal {
+    max-width: 900px;
+    margin: auto;
+}
+
+.navbar {
+    background-color: rgba(0, 0, 0, 90%);
+    position: fixed;
+    width: 100%;
+    padding: 1em;
+    z-index: var(--zindex-navbar);
+}
+
+.navbar .logo {
+    font-weight: 700;
+    font-size: 1.5rem;
+}
+
+.navbar .menu {
+    margin-top: 1rem;
+}
+
+.navbar .menu li {
+    display: inline-block;
+}
+
+.navbar .menu li a {
+    transition: opacity 0.5s;
+}
+
+.navbar .menu li a:hover {
+    opacity: 0.6;
+}
+
+.home .content_bg-home {
+    background-color: var(--color-primary);
+    height: 50vh;
+}
+
+.home .box_img-home {
+    width: 300px;
+    border-radius: 100%;
+    overflow: hidden;
+    position: relative;
+    top: -150px;
+    left: 1rem;
+}
+
+.home .box_img-home img {
+    width: 100%;
+}
+
+.home .box_info-home {
+    position: relative;
+    text-align: center;
+    top: -100px;
+}
+
+.home .box_info-home .title-home {
+    font-size: 3rem;
+}
+
+.home .box_info-home .title-home span {
+    color: var(--color-primary);
+}
+
+.about {
+    font-size: 1.5rem;
+    padding: 1em;
+    text-align: justify;
+}
+
+.about p {
+    margin: 1rem 0;
+}
+
+.skills {
+    text-align: center;
+}
+
+.title-skills {
+    margin-bottom: 1rem;
+}
+
+.skills svg {
+    fill: var(--color-primary);
+}
+
+.contact {
+    padding: 1rem;
+    max-width: 600px;
+    margin: auto;
+}
+
+.contact h2 {
+    margin-bottom: 1rem;
+}
+
+form .box-input {
+}
+
+form .box-input > * {
+    display: block;
+}
+
+form .submit {
+    background-color: var(--color-primary);
+    border: none;
+    padding: 1rem;
+    border-radius: 0.2rem;
+    color: #fff;
+    font-weight: 700;
+}
+
+footer {
+    text-align: center;
+    background-color: var(--color-primary);
+    color: #fff;
+}
