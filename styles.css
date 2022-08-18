@@ -202,27 +202,3 @@ footer {
     align-items: center;
     justify-content: center;
 }
-
-/* .padre {
-    height: 300px;
-    background-color: red;
-    display: flex;
-    gap: 1rem;
-
-    justify-content: space-between;
-    align-items: center;
-    padding: 0 1em;
-}
-
-.hijo {
-    width: 100px;
-    height: 100px;
-}
-
-.hijo:nth-child(1) {
-    background-color: green;
-}
-
-.hijo:nth-child(2) {
-    background-color: blue;
-} */
