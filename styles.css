@@ -2,6 +2,8 @@
 
 :root {
     --color-primary: #293462;
+    --color-form: #29346230;
+    --color-focus: #29346299;
     /* Este zindex es el maximo */
     --zindex-navbar: 5000;
     font-size: 16px;
@@ -15,6 +17,7 @@
 
 html {
     scroll-behavior: smooth;
+    font-family: "Open Sans", sans-serif;
 }
 
 ul {
@@ -25,6 +28,23 @@ a {
     text-decoration: none;
     color: var(--color-primary);
     font-weight: 700;
+}
+
+input,
+textarea {
+    border: none;
+    padding: 1rem;
+    outline: none;
+    background-color: var(--color-form);
+    border-radius: 0.5rem;
+    border: 3px solid transparent;
+
+    transition: border 0.5s;
+}
+
+input:focus,
+textarea:focus {
+    border: 3px solid var(--color-form);
 }
 
 .container_principal {
@@ -38,6 +58,10 @@ a {
     width: 100%;
     padding: 1em;
     z-index: var(--zindex-navbar);
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
 }
 
 .navbar .logo {
@@ -46,11 +70,8 @@ a {
 }
 
 .navbar .menu {
-    margin-top: 1rem;
-}
-
-.navbar .menu li {
-    display: inline-block;
+    display: flex;
+    gap: 1rem;
 }
 
 .navbar .menu li a {
@@ -111,8 +132,22 @@ a {
     margin-bottom: 1rem;
 }
 
-.skills svg {
-    fill: var(--color-primary);
+.skills i {
+    color: var(--color-primary);
+    font-size: 5rem;
+    cursor: pointer;
+    padding: 1rem;
+    transition: background-color 0.5s, color 0.5s, transform 0.5s;
+    border-radius: 100%;
+}
+
+.skills i:hover {
+    background-color: var(--color-primary);
+    color: #fff;
+}
+
+.skills i:active {
+    transform: scale(0.9);
 }
 
 .contact {
@@ -125,8 +160,10 @@ a {
     margin-bottom: 1rem;
 }
 
-form .box-input > * {
-    display: block;
+.contact form {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem;
 }
 
 form .submit {
@@ -136,10 +173,20 @@ form .submit {
     border-radius: 0.2rem;
     color: #fff;
     font-weight: 700;
+    width: 100%;
+    cursor: pointer;
+    transition: background-color 0.5s;
+}
+
+form .submit:hover {
+    background-color: var(--color-focus);
 }
 
 footer {
-    text-align: center;
+    height: 50px;
     background-color: var(--color-primary);
     color: #fff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
